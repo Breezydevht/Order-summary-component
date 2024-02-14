@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+/* Primary - color*/
+--Pale-blue: hsl(225, 100%, 94%);
+--Pale-blue1: hsla(225, 100%, 94%, 0.4);
+--Bright-blue: hsl(245, 75%, 52%);
+
+/* Neutral - Color*/
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    height: 100vh;
+    background-color: var(--Pale-blue);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container {
+    max-width: 400px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container-content {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    margin-bottom: 20px;
+}
+
+.plan {
+    background-color: var(--Pale-blue1);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+
+.price-plan {
+    margin-left: -80px;
+}
+
+span {
+    display: block;
+    margin: 5px;
+}
+
+span:first-of-type {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+span:last-of-type {
+    font-size: 0.9em;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+
+a{
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.button-section {
+    margin-top: 30px;
+}
+button:first-of-type {
+    width: 100%;
+    background-color: var(--Bright-blue);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    color: var(--Very-pale-blue);
+    font-size: 0.7em;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+}
+
+
+button:last-of-type {
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px;
+    color: var(--Desaturated-blue);
+    font-size: 0.7em;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Very-pale-blue);
+}
+
+button:first-of-type:active {
+    background-color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+button:last-of-type:active {
+    color: var(--Dark-blue);
+    font-size: 0.8rem;
+    font-weight: 900;
+}
+
+.attribution {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (min-width: 375px) and (max-width: 1440px){
+    body {
+        background-image: url(/images/pattern-background-mobile.svg);
+    }
+}
